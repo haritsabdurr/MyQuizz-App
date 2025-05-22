@@ -10,7 +10,9 @@ export default function Home() {
     <div className='max-w-[800px] mx-auto mt-52 px-6 md:px-2'>
       <LevelModal open={levelModal} setOpen={setLevelModal} />
       <div className='text-center'>
-        <h1 className='text-lg md:text-2xl text-gray-300'>Welcome {name}!</h1>
+        <h1 className='text-lg md:text-2xl text-gray-300'>
+          Welcome <span className='underline'>{name}</span> !
+        </h1>
         <h1 className='text-2xl md:text-5xl text-blue-500 font-bold mt-2'>
           Test Your Knowledge
         </h1>

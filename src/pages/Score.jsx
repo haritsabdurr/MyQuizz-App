@@ -8,6 +8,7 @@ export default function Score() {
   const timeTaken = state?.quizDuration ?? 0;
 
   const level = localStorage.getItem('level');
+  const username = localStorage.getItem('username');
   const correctAnswer = score / 10;
 
   const handleExit = () => {
@@ -19,7 +20,9 @@ export default function Score() {
   return (
     <div className='max-w-[800px] mx-auto mt-48 px-6 md:px-2'>
       <div className='text-center text-gray-300'>
-        <h1 className='text-4xl font-semibold'>Well Done!</h1>
+        <h1 className='text-4xl font-semibold'>
+          Well Done <span className='underline'>{username}</span> !
+        </h1>
         <p className='mt-4 text-md'>Your Final Score is :</p>
       </div>
 
